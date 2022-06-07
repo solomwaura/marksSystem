@@ -7,7 +7,7 @@ $password = "";
 $dbname = "class";
 
 
-
+//creating database connection 
 $conn = mysqli_connect($server,$username,$password,$dbname);
 $mathErrr = "";
 if($conn ) {
