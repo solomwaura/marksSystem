@@ -1,0 +1,87 @@
+                * {
+                    padding: 0;
+                    margin: 0;
+                }
+                
+                body {
+                    padding: 15px;
+                    background-color: aquamarine;
+                }
+                
+                .content {
+                    display: flex;
+                    margin: 0 auto;
+                }
+                
+                .content .cont {
+                    margin: 10px auto;
+                }
+                
+                form {
+                    background-color: rgb(51, 212, 113);
+                    padding: 15px;
+                }
+                
+                form label {
+                    display: block;
+                    padding: 5px;
+                }
+                
+                input[type="number"] {
+                    display: block;
+                    padding: 5px;
+                    border-radius: 10px;
+                    border: none;
+                    width: 100%;
+                }
+                
+                input[type="text"] {
+                    display: block;
+                    padding: 5px;
+                    border-radius: 10px;
+                    border: none;
+                }
+                
+                input[type="submit"] {
+                    display: inline;
+                    padding: 5px;
+                    margin-top: 15px;
+                    background-color: red;
+                    border-radius: 10px;
+                    border: none;
+                    color: white;
+                }
+                
+                input[type="reset"] {
+                    display: inline;
+                    padding: 5px;
+                    margin-top: 15px;
+                    margin: 0 auto;
+                    background-color: blue;
+                    border-radius: 10px;
+                    border: none;
+                    color: wheat;
+                }
+                
+                .error {
+                    color: red;
+                    font-size: 18px;
+                }
+                
+                table {
+                    border: 1px;
+                }
+                
+                td .update {
+                    text-decoration: none;
+                    padding: 10px;
+                    background-color: aqua;
+                    border-radius: 10px;
+                }
+                
+                td .delete {
+                    text-decoration: none;
+                    padding: 10px;
+                    background-color: red;
+                    border-radius: 10px;
+                }
