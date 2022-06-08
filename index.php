@@ -10,14 +10,14 @@
 </head>
 <body>
     <div class="content">
-        <a href="results.php">Rank List</a>
+        <a href="results.php">Rank List :</a>
         <div class="cont">
         <form onsubmit="return validate()" action="." method="Post">
             <h3>Student Marks</h3>
             <div class="input-group">
             <label>Name :</label>
             <p class="error" ><?php echo $nErr; ?> </p>
-            <input type="text" name="name" id="name" pattern="[a-zA-Z]{1,}" required>
+            <input type="text" name="name" id="name" pattern="[a-zA-Z\s]+" required>
             </div>
             <div class="input-group">
             <label>Math :</label>
@@ -62,7 +62,7 @@
 
                 if ($result->num_rows > 0 ){
                     ?>
-                    <h3>Class List Results</h3>
+                    <h3>Last Added Student</h3>
                     <table>
                     <thead>
                     <tr>

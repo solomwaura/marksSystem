@@ -24,6 +24,7 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
     $science = $_POST['science'];
     $tscience = $_POST['tscience'];
     $sstudies = $_POST['sstudies'];
+    $totals =$math+$english+$science+$tscience+$sstudies;
     
 
     if(ctype_digit($name)){
@@ -48,8 +49,8 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
 
     else{
 
-        $sql = "INSERT INTO marks (name,math,english,science,t_science,s_studies)
-            VALUES('$name','$math','$english','$science','$tscience','$sstudies')";
+        $sql = "INSERT INTO marks (name,math,english,science,t_science,s_studies,total)
+            VALUES('$name','$math','$english','$science','$tscience','$sstudies','$totals')";
    
     if($conn->query($sql) === TRUE) {
        header('location: results.php');

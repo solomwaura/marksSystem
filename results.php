@@ -26,11 +26,21 @@
         padding:10px;
         margin:10px;
     }
+    table th {
+        padding:5px;
+        margin:3px;
+
+    }
+    table td {
+        padding:5px;
+        margin:3px;
+
+    }
 </style>
 </head>
 <body>
     <a href="index.php">Home</a>
-    <h3>Rank List </h3>
+    <h3>Class List </h3>
     <div class="content">
         <div class="cont">
       
@@ -42,12 +52,12 @@
 
                 if ($result->num_rows > 0 ){
                     ?>
-                    <h3>Class List Results</h3>
-                    <p><button onclick="sortTotal()">Sort</button></p>
+                    <h3>Class Rank Results :</h3>
+                   
                     <table id="table" >
                    
                     <tr>
-                        <th>Id</th>
+                        <!-- <th>Id</th> -->
                         <th>Name</th>
                         <th>Math</th>
                         <th>English</th>
@@ -67,6 +77,8 @@
                         $ss = $row['s_studies'];
 
                         $total = $mt+$en+$sc+$ts+$ss;
+                        
+                        
 
                     
                         
@@ -75,7 +87,7 @@
                     
                     
                         <tr>
-                            <td><?php echo $row['id']; ?></td>
+                            <!-- <td><?php echo $row['id']; ?></td> -->
                             <td><?php echo $row['name']; ?></td>
                             <td><?php echo $row['math']; ?></td>
                             <td><?php echo $row['english']; ?></td>
@@ -95,12 +107,12 @@
                             
                         </tr>
                 <?php
-                // include 'fetch.php';
+               
                     } ?>
                   
                     </table>
-                    
                 
+
 
                 <?php
                     

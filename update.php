@@ -28,8 +28,9 @@
                         $sc = $row['science'];
                         $ts = $row['t_science'];
                         $ss = $row['s_studies'];
+                        $total = $row['total'];
 
-                        $total = $mt+$en+$sc+$ts+$ss;
+                        // $total = $mt+$en+$sc+$ts+$ss;
 
                         
                     ?>    
@@ -37,7 +38,7 @@
             <form action="updatescript.php" method="post">
                 <input type="hidden" name="pid" value="<?php echo $row['id'] ?>">
                 <label>Name :</label>
-                <input type="text" name="name" value="<?php echo $row['name']; ?>" pattern="[a-zA-Z]{1,}" required>
+                <input type="text" name="name" value="<?php echo $row['name']; ?>" pattern="[a-zA-Z\s]+" required>
                 <label>Math :</label>
                 <input type="text" name="math" value="<?php echo $row['math']; ?>" min="0" max="100" required>
                 <label>English :</label>

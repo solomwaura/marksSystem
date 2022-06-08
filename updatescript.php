@@ -40,8 +40,10 @@ if(isset($_POST['updating'])){
     $technology = $_POST['tscience'];
     $studies = $_POST['sstudies'];
 
+    $tt = $mth+$eng+$sci+$technology+$studies;
+
     $update = "UPDATE marks SET name='$stud',math='$mth',english='$eng',science='$sci',
-    t_science='$technology',s_studies='$studies' WHERE id='$id'";
+    t_science='$technology',s_studies='$studies',total='$tt' WHERE id='$id'";
 
     if($conn->query($update) === TRUE) {
         header('location: results.php');
