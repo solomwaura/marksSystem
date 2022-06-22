@@ -1,10 +1,5 @@
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>class</title>
-<link rel="stylesheet" href="style.css">
-
-</head>
+<?php include('db.php'); ?>
+<?php include('base.php'); ?>
 <body>
     <a href="results.php">Back</a>
     <h3>Updating data : </h3>
@@ -15,20 +10,26 @@
         <div class="cont">
             <div class="results">
                 <?php
-                include 'fetch.php';
+                    require('fetch.php');
 
-                if ($results->num_rows > 0 ){
-                    ?>
+                    $pid = $_POST['pid'];
+
+                    $sql = "SELECT *FROM marks WHERE id='$pid'";
                     
-                  
-                    <?php
-                    while($row = $results->fetch_array()){
-                        $mt = $row['math'];
-                        $en = $row['english'];
-                        $sc = $row['science'];
-                        $ts = $row['t_science'];
-                        $ss = $row['s_studies'];
-                        $total = $row['total'];
+                    $results = $conn->query($sql);
+
+                    if ($results->num_rows > 0 ){
+                        ?>
+                        
+                    
+                        <?php
+                        while($row = $results->fetch_array()){
+                            $mt = $row['math'];
+                            $en = $row['english'];
+                            $sc = $row['science'];
+                            $ts = $row['t_science'];
+                            $ss = $row['s_studies'];
+                            $total = $row['total'];
 
                         // $total = $mt+$en+$sc+$ts+$ss;
 

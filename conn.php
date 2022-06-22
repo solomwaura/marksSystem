@@ -1,4 +1,5 @@
 <?php
+session_start();
 
 $server = "localhost";
 $username = "root";
@@ -13,17 +14,21 @@ if($conn ) {
 echo ("");
 }
 else {
-    die('could not connect:' . mysql_error());
-}
+    die('could not connect:');
+ }
+
+
 $mErr = $sErr = $eErr = $tsErr = $ssErr = $nErr = "";
-if($_SERVER['REQUEST_METHOD']=='POST'){
+if(isset($_POST['submit'])){
    
     $name = $_POST['name'];
+    $class = $_SESSION['class'];
     $math = $_POST['math'];
     $english = $_POST['english'];
     $science = $_POST['science'];
     $tscience = $_POST['tscience'];
     $sstudies = $_POST['sstudies'];
+
     $totals =$math+$english+$science+$tscience+$sstudies;
     
 
@@ -49,15 +54,15 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
 
     else{
 
-        $sql = "INSERT INTO marks (name,math,english,science,t_science,s_studies,total)
-            VALUES('$name','$math','$english','$science','$tscience','$sstudies','$totals')";
+        $sql = "INSERT INTO marks (name,class,math,english,science,t_science,s_science,total)
+            VALUES('$name','$class','$math','$english','$science','$tscience','$sstudies','$totals')";
    
     if($conn->query($sql) === TRUE) {
        header('location: results.php');
        
     }
     else {
-       header('location: index.php');
+       header('location: dashboard.php');
     }
 
     }

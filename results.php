@@ -1,12 +1,7 @@
-<?php
-
- include 'conn.php'
- 
- ?>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>class</title>
-<link rel="stylesheet" href="style.css">
+<?php include 'conn.php';?>
+<?php include('db.php'); ?>
+<?php include('fetch.php'); ?>
+<?php include('base.php'); ?>
 <style>
     .update{
         text-decoration: none;
@@ -39,20 +34,22 @@
 </style>
 </head>
 <body>
-    <a href="index.php">Home</a>
+    <a href="marks.php">Back</a>
     <h3>Class List </h3>
     <div class="content">
         <div class="cont">
       
         </div>
         <div class="cont">
+        <h2 class="c2"> <?php echo $_SESSION['class']; ?> Rank List</h2>
             <div class="results">
+
                 <?php
                 include 'rank.php';
 
                 if ($result->num_rows > 0 ){
                     ?>
-                    <h3>Class Rank Results :</h3>
+                    <!-- <h3>Class Rank Results :</h3> -->
                    
                     <table id="table" >
                    
@@ -74,7 +71,7 @@
                         $en = $row['english'];
                         $sc = $row['science'];
                         $ts = $row['t_science'];
-                        $ss = $row['s_studies'];
+                        $ss = $row['s_science'];
 
                         $total = $mt+$en+$sc+$ts+$ss;
                         
@@ -93,7 +90,7 @@
                             <td><?php echo $row['english']; ?></td>
                             <td><?php echo $row['science']; ?></td>
                             <td><?php echo $row['t_science']; ?></td>
-                            <td><?php echo $row['s_studies']; ?></td>
+                            <td><?php echo $row['s_science']; ?></td>
                             <td><?php echo $total ?></td>
                             <td padding="5px">
             <form action="update.php" method="post">
@@ -123,10 +120,7 @@
 
                 ?>
             </div>
-                <?php 
-                    $script = file_get_contents('script.js');
-                    echo "<script>" .$script."</script>"
-                ?>
+                
         </div>
         
     </div>

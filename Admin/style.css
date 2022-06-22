@@ -1,0 +1,40 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    padding: 15px;
+    background-color: aquamarine;
+}
+
+.content {
+    display: flex;
+    margin: 0 auto;
+}
+.admin{
+    margin: 0 auto;
+    background-color: orangered;
+    padding: 15px;
+}
+#success {
+    color: green;
+    font-size: 16px;
+    padding: 5px;
+}
+form {
+    padding: 10px;
+}
+
+label{
+    display: block;
+    padding: 10px 0;
+}
+input {
+    padding: 5px;
+    display: block;
+    margin: 5px 0;
+}
+input type[submit]{
+    background-color: green;
+}

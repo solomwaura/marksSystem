@@ -85,3 +85,44 @@
                     background-color: red;
                     border-radius: 10px;
                 }
+
+/* styling login page */
+
+.form {
+   
+    margin: 0 auto;
+}
+
+/* styling the dashboard */
+.col ul li {
+    line-height: 20px;
+}
+.col ul li a{
+    text-decoration: none;
+}
+
+.col {
+    background-color: blue;
+    margin: 0 auto;
+    padding: 25px;
+}
+.col ul li {
+    margin: 5px auto;
+    list-style: none;
+    padding: 10px;
+    width: 100%;
+}
+.col ul li:hover{
+    background-color: orangered;
+}
+ul li a{
+    text-decoration: none;
+    font-size: 20px;
+    color: black;
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+}
+.col ul li a:hover {
+    background-color: orangered;
+}
